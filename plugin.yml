@@ -1,0 +1,23 @@
+name: refreshResource
+main: matsuyuki\refreshResource\refreshResource
+api: 4.0.0
+version: 1.0.0
+author: matsuyuki
+description: 人工資源を補充します
+permissions:
+  forceRefresh.refreshResource:
+    description: この権限を持っている人は、コマンド経由で人工資源を操作できる
+    default: op
+commands:
+  ref:
+    description: "/ref <ID> 人工資源を補充します もしくは /ref reload 設定ファイルを再読み込みします"
+    usage: "/ref <[ID]|reload> (/ref のみでIDの一覧を確認します)"
+    permission: forceRefresh.refreshResource
+  addref:
+    description: "/addref 人工資源を補充する設定を追加します"
+    usage: "/addref"
+    permission: forceRefresh.refreshResource
+  delref:
+    description: "/delref <ID> 人工資源を補充する設定を削除します"
+    usage: "/delref <ID>"
+    permission: forceRefresh.refreshResource
